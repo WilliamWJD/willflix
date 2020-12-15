@@ -21,6 +21,7 @@ const App = () =>{
       let randomChosen = Math.floor(Math.random()*(originals[0].items.results.length - 1))
       let chosen = originals[0].items.results[randomChosen]
       let chosenInfo = await tmdb.getMovieInfo(chosen.id, 'tv');
+
       setFeaturedData(chosenInfo);
     }
     loadAll();
@@ -68,6 +69,12 @@ const App = () =>{
         Direitos de imagem para Netflix <br/>
         Dados pegos do site Themoviedb.org
       </footer>
+
+      {movieList.length <= 0 && (    
+        <div className="loading">
+          <img src="https://www.filmelier.com/pt/br/news/wp-content/uploads/2020/03/Netflix_LoadTime-scaled.gif" alt="Carregando"/>
+        </div>
+      )}
     </div>
   )
 }
