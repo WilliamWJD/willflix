@@ -62,6 +62,12 @@ const App = () =>{
           />
         ))}
       </div>
+
+      <footer>
+        Feito com <span role="img" aria-lavel="coração">❤</span> por William Dias <br/>
+        Direitos de imagem para Netflix <br/>
+        Dados pegos do site Themoviedb.org
+      </footer>
     </div>
   )
 }
